@@ -30,6 +30,7 @@ Backup*/
 
 # ISO Builder temp files
 iso_builder/working/
+iso_builder/output/
 iso_builder/output/*.iso
 
 # Logs
