@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Backups
+*.bak
+*.backup
+Backup*/
+
+# ISO Builder temp files
+iso_builder/working/
+iso_builder/output/*.iso
+
+# Logs
+*.log
+launcher/logs/
+
+# Local files
+.env
+local_config.json

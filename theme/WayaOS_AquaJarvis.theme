@@ -1,0 +1,63 @@
+# Theme Configuration File for Waya-OS: Aqua Jarvis Edition
+# Install with: double-click WayaOS_AquaJarvis.deskthemepack or apply manually
+
+[Control Panel\Appearance\NewScheme]
+"Sweet Apocalypse"=1
+
+[Control Panel\Desktop]
+Wallpaper="C:\Windows\Web\Wallpaper\Waya-OS\sweet_apocalypse_default.jpg"
+WallpaperStyle=10
+
+[Control Panel\Colors]
+ActiveBorder=255, 127, 212
+ActiveTitle=58, 12, 163
+AppWorkSpace=0, 0, 0
+Background=0, 0, 0
+ButtonAlternativeFace=255, 255, 255
+ButtonDkShadow=128, 128, 128
+ButtonFace=127, 255, 212
+ButtonHighlight=255, 255, 255
+ButtonLight=192, 192, 192
+ButtonShadow=128, 128, 128
+ButtonText=58, 12, 163
+GradientActiveTitle=40, 70, 120
+GradientInactiveTitle=64, 64, 64
+GrayText=128, 128, 128
+Hilight=58, 12, 163
+HilightText=255, 255, 255
+HotTrackingColor=255, 215, 0
+InactiveBorder=200, 200, 200
+InactiveTitle=64, 64, 64
+InactiveTitleText=200, 200, 200
+InfoText=0, 0, 0
+InfoWindow=255, 255, 255
+Menu=0, 0, 0
+MenuBar=58, 12, 163
+MenuHilight=127, 255, 212
+MenuText=255, 215, 0
+Scrollbar=200, 200, 200
+TitleText=255, 215, 0
+Window=0, 0, 0
+WindowFrame=58, 12, 163
+WindowText=255, 255, 255
+
+[Control Panel\Desktop\WindowMetrics]
+BorderWidth=2
+PaddedBorderWidth=8
+CaptionHeight=26
+CaptionWidth=26
+MenuHeight=19
+MenuWidth=19
+ScrollHeight=17
+ScrollWidth=17
+SmCaptionHeight=22
+SmCaptionWidth=22
+
+[Control Panel\Cursors\Schemes]
+"Sweet Apocalypse Cursors"=C:\Windows\Cursors\waya_os_rainbow.cur
+
+[Sounds\.Current]
+"Sweet Apocalypse Sounds"=waya_os_sounds
+
+[Metrics]
+AppliedScheme="Sweet Apocalypse"

@@ -1,0 +1,184 @@
+# Waya-OS: Aqua Jarvis Launcher Configuration
+# Main dashboard GUI for your personalized AI workspace
+
+# Theme Configuration
+theme:
+  name: "Sweet Apocalypse"
+  version: "1.0"
+  
+  # Color Palette (RGB Rainbow + Aquamarine accents)
+  colors:
+    primary: "#7FFFD4"           # Aquamarine (main buttons, highlights)
+    secondary: "#3A0CA3"         # Dark Purple (window backgrounds)
+    accent_red: "#FF4C4C"        # Alert/Warning
+    accent_gold: "#FFD700"       # Text/Titles
+    accent_white: "#FFFFFF"      # Text/Icons
+    accent_black: "#000000"      # Base background
+    
+    # Rainbow gradient for hover effects
+    rainbow: [
+      "#FF0000",  # Red
+      "#FF9900",  # Orange
+      "#FFFF00",  # Yellow
+      "#00FF00",  # Green
+      "#00FFFF",  # Cyan
+      "#0000FF",  # Blue
+      "#9900FF"   # Purple
+    ]
+  
+  # Typography
+  fonts:
+    system: "Segoe UI"
+    title: "Segoe UI"
+    mono: "Consolas"
+
+# Launcher Window Configuration
+window:
+  width: 1200
+  height: 800
+  resizable: true
+  always_on_top: false
+  transparency: 0.95  # 95% opaque (slight transparency)
+  start_centered: true
+  
+# Quick Launch Applications
+quick_launch:
+  show_on_startup: true
+  max_buttons: 12
+  
+  apps:
+    - name: "VS Code"
+      icon: "icons/apps/vscode.ico"
+      command: "code"
+      args: []
+      description: "AI-powered code editor with Copilot"
+      
+    - name: "Roblox Studio"
+      icon: "icons/apps/roblox_studio.ico"
+      command: "C:\\Program Files (x86)\\Roblox\\Versions\\RobloxStudioLauncher.exe"
+      args: []
+      description: "Game development platform"
+      
+    - name: "Suno AI"
+      icon: "icons/apps/suno_ai.ico"
+      command: "explorer"
+      args: ["https://suno.ai"]
+      description: "AI music generation"
+      
+    - name: "ChatGPT"
+      icon: "icons/apps/chatgpt.ico"
+      command: "explorer"
+      args: ["https://chatgpt.com"]
+      description: "Your AI assistant"
+      
+    - name: "Terminal"
+      icon: "icons/apps/terminal.ico"
+      command: "powershell"
+      args: []
+      description: "PowerShell terminal"
+      
+    - name: "File Explorer"
+      icon: "icons/apps/folder.ico"
+      command: "explorer"
+      args: ["."]
+      description: "Browse files"
+
+# System Monitoring Panel
+system_monitor:
+  enabled: true
+  refresh_interval: 1000  # milliseconds
+  
+  displays:
+    - name: "CPU Usage"
+      metric: "cpu_percent"
+      unit: "%"
+      max: 100
+      color_low: "#00FF00"
+      color_mid: "#FFD700"
+      color_high: "#FF4C4C"
+      
+    - name: "RAM Usage"
+      metric: "memory_percent"
+      unit: "%"
+      max: 100
+      
+    - name: "GPU Memory"
+      metric: "gpu_memory_percent"
+      unit: "%"
+      max: 100
+      enabled: true  # Only if NVIDIA GPU detected
+      
+    - name: "Temperature"
+      metric: "gpu_temperature"
+      unit: "°C"
+      max: 100
+      warning_threshold: 80
+
+# AI Prompt Engine Integration
+ai_integration:
+  enabled: true
+  provider: "copilot_vibe"  # VS Code Copilot Vibe extension
+  
+  # Load chat history for context
+  chat_history:
+    enabled: true
+    source: "ai_context/conversations.json"
+    include_metadata: true
+    
+  # Waya's coding style
+  style:
+    personality: "dark_comedy_apocalypse"
+    code_style: "pythonic_with_flair"
+    comment_style: "witty"
+    error_handling: "verbose_with_humor"
+    
+  # Auto-load prompts on VS Code launch
+  auto_load_prompt: true
+  prompt_template: "ai_context/default_prompt.md"
+
+# Desktop Organization
+desktop_organizer:
+  enabled: true
+  folders:
+    - name: "Projects"
+      icon: "icons/folders/projects.ico"
+      path: "~/Documents/Projects"
+      
+    - name: "Art"
+      icon: "icons/folders/art.ico"
+      path: "~/Pictures/Art"
+      
+    - name: "Music"
+      icon: "icons/folders/music.ico"
+      path: "~/Music"
+      
+    - name: "Scripts"
+      icon: "icons/folders/scripts.ico"
+      path: "~/Documents/Scripts"
+      
+    - name: "Backups"
+      icon: "icons/folders/backups.ico"
+      path: "~/Backups"
+
+# Startup Behavior
+startup:
+  auto_launch: false
+  minimize_to_tray: true
+  launch_on_boot: false  # Change to true if you want Aqua Jarvis at startup
+
+# Appearance Settings
+appearance:
+  dark_mode: true
+  animate_transitions: true
+  animation_speed: "medium"  # fast, medium, slow
+  blur_background: true
+  show_clock: true
+  show_date: true
+
+# Advanced Settings
+advanced:
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  log_file: "launcher/logs/aqua_jarvis.log"
+  auto_update: true
+  check_updates_on_startup: true
+  telemetry: false  # Privacy-first: disabled by default

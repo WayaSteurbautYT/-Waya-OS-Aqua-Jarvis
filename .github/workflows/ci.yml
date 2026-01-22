@@ -1,0 +1,36 @@
+name: CI - Waya-OS Project Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+    
+    - name: Install dependencies
+      run: |
+        pip install -r launcher/requirements.txt
+    
+    - name: Validate Python files
+      run: |
+        python -m py_compile launcher/aqua_jarvis.py
+        python -m py_compile ai_context/prompt_engine.py
+    
+    - name: Validate JSON files
+      run: |
+        python -m json.tool launcher/config.json > /dev/null
+    
+    - name: Check markdown files exist
+      run: |
+        ls START_HERE.md README.md INSTALL.md DEPLOYMENT.md
