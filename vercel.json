@@ -1,0 +1,15 @@
+{
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "env": {
+    "NEXT_PUBLIC_GITHUB_REPO": "WayaSteurbautYT/-Waya-OS-Aqua-Jarvis",
+    "NEXT_PUBLIC_GITHUB_BRANCH": "main"
+  },
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "/"
+    }
+  ]
+}
